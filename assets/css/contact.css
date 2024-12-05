@@ -1,0 +1,154 @@
+:root {
+    --bg-color: #0F103F;
+    --primary-color: #ffffff;
+    --accent-color: #9249F2;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Contact */
+
+#contact {
+    position: relative;
+    padding: 100px 50px; /* Match padding with other sections */
+    margin-top: 150px; /* Add space between sections */
+    overflow: visble; /* Ensure background elements stay inside */
+}
+
+.contact-container {
+    display: flex; /* Arrange children in a row */
+    flex-wrap: wrap; /* Ensure it adjusts for smaller screens */
+    gap: 20px; /* Add space between columns */
+    justify-content: space-between; /* Evenly distribute space */
+    align-items: center; /* Align items in the center */
+    box-sizing: border-box;
+    max-width: 900px; /* Limit the maximum width for consistency */    
+    margin: 0 auto; /* Center horizontally */
+    padding: 100px 90px; /* Internal spacing */
+    background: rgba(47, 47, 138, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    position: relative;;
+    z-index: 0;
+}
+
+.girl1 {
+    position: absolute;
+    top: -444px; /* Adjust for vertical alignment */
+    left: 30px; /* Adjust for horizontal alignment */
+    width: 450px; /* Adjust size as needed */
+    z-index: 1; /* Ensure it's above other elements */
+}
+
+.planet {
+    position: absolute;
+    top: 200px; /* Adjust to position the planet higher */
+    left: -150px; /* Move to the left */
+    width: 400px; /* Adjust size as needed */
+    height: auto;
+    opacity: 0.8; /* Slight transparency for better blending */
+    z-index: -1; /* Ensure it's behind other elements */
+}
+
+.circle4 {
+    position: absolute;
+    top: 100px; /* Adjust to position the circle lower */
+    right: -200px; /* Move to the right */
+    width: 800px; /* Adjust size as needed */
+    opacity: 0.7; /* Slight transparency for better blending */
+    z-index: -1; /* Ensure it's behind other elements */
+}
+
+.contact-content {
+    flex: 1; /* Takes up one part of the row */
+    min-width: 200px; /* Ensure minimum width */
+    max-width: 500px; /* Set max-width for content */
+    display: flex; /* Set a flex layout for inner items */
+    flex-direction: column; /* Stack items vertically */
+    gap: 30px; /* Adjust this for larger spacing between items */
+}
+
+.contact-content p {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    margin-right: 50px;
+    text-align: justify;
+}
+
+.contact-links {
+    display: flex;
+    width: 260px;
+    height: 105px;
+    top: 260px;
+    left: -3px;
+    gap: 12px; /* Space between icons */
+}
+
+
+.contact-links a img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.contact-links a img:hover {
+    transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
+.contact-form {
+    flex: 1; /* Takes up one part of the row */
+    min-width: 300px; /* Ensure minimum width */
+    max-width: 500px; /* Set max-width for the form */
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between form fields */
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%; /* Stretch input fields to full width */
+    padding: 10px 15px; /* Add internal padding */
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.3);
+    color: var(--primary-color);
+    box-shadow: 0px 10px 20px rgba(7, 7, 26, 0.15);
+}
+
+.contact-form textarea {
+    height: 120px; /* Increase height for message textarea */
+    resize: none; /* Disable resizing */
+}
+
+.contact-form input::placeholder, 
+.contact-form textarea::placeholder {
+    color: var(--bg-color); 
+}
+
+
+.contact-form button {
+    width: auto; /* Automatically size the button */
+    padding: 10px 20px;
+    background: linear-gradient(105.95deg, #C961DE 24.79%, #2954A3 71.87%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(7, 7, 26, 0.15);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.contact-form button:hover {
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}

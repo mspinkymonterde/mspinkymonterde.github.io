@@ -1,0 +1,42 @@
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #050736;
+        --gradient-1: radial-gradient(at 12% 26%, #0a1b50 0px, transparent 50%);
+        --gradient-2: radial-gradient(at 48% 55%, #0a344d 0px, transparent 50%);
+        --gradient-3: radial-gradient(at 28% 95%, #2e0f48 0px, transparent 50%);
+        --gradient-4: radial-gradient(at 42% 60%, #0d4a4a 0px, transparent 50%);
+        --gradient-5: radial-gradient(at 62% 19%, #42084e 0px, transparent 50%);
+        --gradient-6: radial-gradient(at 79% 79%, #0d144a 0px, transparent 50%);
+        --text-color: #e3e0ff;
+        --link-color: #6fe7d6;
+        --link-hover-color: #ffffff;
+        --header-bg: rgba(186, 179, 255, 0.102);
+        --header-box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.9);
+        --nav-bg: rgba(8, 9, 48, 0.95);
+        --hover-bg: #ffffff2e;
+        --faint-bg: rgba(206, 208, 239, 0.15);
+        --selection-bg: #038573;
+        --figure-border: #575757;
+        --plaintext-bg: #272822;
+        --plaintext-color: #d8e2c3;
+        --secondary-color: #dad6ff;
+        --tertiary-color: #96a8df;
+        --faint-border-color: rgba(225, 220, 255, 0.145098);
+    }
+}
+
+@font-face {
+    font-family: 'Space Grotesk Regular';
+    src: url("assets/fonts/SpaceGrotesk-Regular.woff2") format("woff2"),url("/assets/fonts/SpaceGrotesk-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Space Grotesk Bold';
+    src: url("assets/fonts/SpaceGrotesk-Bold.ttf") format("woff2"),url("/assets/fonts/SpaceGrotesk-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap
+}

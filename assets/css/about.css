@@ -1,0 +1,160 @@
+:root {
+    --bg-color: #0F103F;
+    --primary-color: #ffffff;
+    --accent-color: #9249F2;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 1240px;
+}
+
+/* About Me Section */
+#about {
+    position: relative;
+    padding: 100px 50px; /* Top & bottom spacing */
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Circle Background */
+.circle2-container {
+    position: absolute;
+    top: -150px; /* Adjust to overlap with the home section */
+    right: -200px; /* Push it slightly beyond the right edge */
+    z-index: 0; /* Adjust layering to stay behind the content */
+}
+
+.circle2-container img {
+    width: 1000px; /* Adjust size to make it proportionate */
+    height: auto; /* Maintain aspect ratio */
+    opacity: 0.75; /* Make it subtle for a background effect */
+    pointer-events: none; /* Prevent the image from affecting clicks */
+}
+
+
+/* About Container */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; /* Space between text and photo */
+    max-width: 1200px; /* Limit content width */
+    margin: auto;
+    flex-wrap: wrap; /* Wrap on smaller screens */
+}
+
+/* About Content */
+.about-content {
+    max-width: 550px;
+    flex: 1; /* Take up equal space */
+}
+
+.about-content h3 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem; /* Scalable font size */
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+.about-content p {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Photo Card */
+.photo-card {
+    flex: 1; /* Take up equal space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.about-img {
+    width: 100%;
+    max-width: 400px;
+    background: var(--bg-color);
+    border-radius: 30px; /* Rounded edges for a modern look */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.skills {
+    position: relative; /* Ensures the container's relative positioning */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0; /* Adds space above and below */
+    overflow: visble; /* Prevents elements from spilling out */
+}
+
+.skills--container {
+    position: relative; /* Keeps the content above the background */
+    max-width: 1200px; /* Adjust width as needed */
+    padding: 0rem 1rem;
+    text-align: center;
+    color: var(--primary-color); /* Use primary color for text */
+}
+
+.circle3-container {
+    position: absolute;
+    width: 1667px;
+    height: 1832px;
+    left: -250px; /* Adjust for horizontal alignment */
+    top: -300px; /* Adjust for vertical alignment */
+    z-index: -1; /* Places the circle behind the content */
+    opacity: 25%; /* Adjust transparency for a subtle effect */
+}
+
+.circle3-container img {
+    width: 100%;
+    height: auto;
+    display: block; /* Ensures proper image scaling */
+}
+
+.skills h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(25px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.skill {
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.skill > img {
+    height: auto;
+    width: 50px;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.skill h3 {
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
