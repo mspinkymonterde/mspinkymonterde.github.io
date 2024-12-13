@@ -1,1 +1,4 @@
-permalink: /:path
+baseurl: '' 
+url: https://mspinkymonterde.github.io/pinky-monterde
+permalink: pretty 
+
