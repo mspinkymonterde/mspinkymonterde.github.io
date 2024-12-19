@@ -1,4 +1,5 @@
 theme: jekyll-theme-minimal
-baseurl: 'https://mspinkymonterde.github.io'
+baseurl: '/pinky-monterde'
 url: https://mspinkymonterde.github.io/
 permalink: pretty 
+
