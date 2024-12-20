@@ -1,0 +1,116 @@
+.r-cont {
+    margin-bottom: 4rem;
+    margin-top: 6rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1240px;
+}
+
+.r-cont .r-text {
+    margin-left: 32px;
+    margin-right: 32px;
+    flex-direction: column;
+}
+
+.r-cont h1 {
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 0.5em 0;
+    text-transform: uppercase;;
+    font-size: 3rem;
+}
+
+.r-cont p{
+    font-size: 14px;
+    line-height: 1;
+}
+
+.r-cont img {
+    max-width: 30px;
+    height: 30px;
+}
+
+.r-cont img:hover {
+    transform: scale(1.1);
+}
+
+.r-books {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 3rem;
+}
+
+.r-card {
+    width: 200px;
+    height: 300px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0.5rem; 
+    border: 8px solid var(--faint-border-color);
+    transition: transform 0.3s ease-in-out;
+    justify-content: center;
+}
+
+.r-card:hover {
+    transform: scale(1.1);
+}
+
+
+.r-img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.r-body {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -110%;
+    position: absolute;
+    background: #0507367b;
+    backdrop-filter: blur(5px);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+
+.r-card:hover .r-body {
+    right: 0;
+    transition: 0s;
+    transform: scale(1.1);
+}
+
+.r-body h1 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.r-body p {
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.r-body .info {
+    text-transform: none;
+    margin: 20px 0;
+    font-weight: 400;
+}
+
+.r-h1 {
+    line-height: 1.2;
+    margin: 2em 0 0.8em 0;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+
+}
+

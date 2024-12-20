@@ -1,0 +1,15 @@
+#notes {
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+iframe {
+    width: 95%; 
+    height: 500px; 
+    border: 2px solid #ccc; 
+    border-radius: 10px; 
+    padding: none;
+    margin-left: 32px;
+    margin-right: 32px;
+}
