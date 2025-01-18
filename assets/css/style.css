@@ -485,9 +485,7 @@ header {
     gap: 20px 20px;
     grid-auto-flow: row;
     grid-template-areas: ".";
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0 cover 40%;
+ 
     
 }
 
@@ -543,6 +541,9 @@ header {
     overflow: hidden;
     margin-bottom: 1rem;
     background-color: var(--header-bg);
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
 }
 
 .project-image {
