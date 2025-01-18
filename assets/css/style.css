@@ -52,7 +52,7 @@ body, .main, footer, a, h1, h2, h3, h4, h5, h6 {
     z-index: 9999;
     left: 0;
     height: 4px;
-    background-color: #3bdc90; 
+    background-color: #6a0dad; 
     border-bottom: solid 4px;
     border-image: linear-gradient(90deg, #6a0dad 10%, #8a2be2 28%, #4b0082 50%, #0000ff 72%, #4169e1 90%) 100;
 }
