@@ -33,3 +33,13 @@ navbarLinks.forEach(link => {
         link.classList.remove('active');
     }
 });
+
+window.addEventListener('load', () => {
+    const loader = document.querySelector('.loader');
+
+    loader.querySelector('.loader').classList.add('loader--hidden');
+
+    loader.qqerySelector('.loader').addEventListener('transitionend', () => {
+        document.body.removeChild(document.querySelector('.loader'));
+    });
+});
