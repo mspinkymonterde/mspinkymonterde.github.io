@@ -484,7 +484,11 @@ header {
     grid-template-rows: 1fr;
     gap: 20px 20px;
     grid-auto-flow: row;
-    grid-template-areas: "."
+    grid-template-areas: ".";
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+    
 }
 
 @media screen and (min-width: 50em) {
