@@ -1,3 +1,16 @@
+/* Animation */
+@keyframes appear {
+    from {
+      opacity: 0;
+      transform: translateZ(-100px);
+      
+    }
+    to {
+      opacity: 1;
+      transform: translateZ(0px);
+    }
+  }
+
 p {
     font-family: 'Space Grotesk Regular', Arial, sans-serif;
     line-height: 1.4;
@@ -20,6 +33,7 @@ h3, h4, h5, h6 {
     padding-right: 32px;
     margin-left: auto;
     margin-right: auto;
+    
 }
 @media (min-width: 30em) {
     .about-container {
@@ -38,13 +52,13 @@ h3, h4, h5, h6 {
         flex-wrap: wrap; 
         gap: 1rem; 
         position: relative; 
-        flex-direction: column; 
-        
+        flex-direction: column;
 }
+
 @media (min-width: 30em) {
     .about-img-container {
         padding-left: 2rem;
-        flex-direction: row; 
+        flex-direction: row;         
     }
 }
 
@@ -55,7 +69,11 @@ h3, h4, h5, h6 {
     background: #0F103F;
     border-radius: 30px; 
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%; 
 }
+
 @media (min-width: 30em) {
     .profile-img {
     width: 100%;
@@ -92,6 +110,9 @@ h3, h4, h5, h6 {
     border-color: var(--faint-border-color); 
     border-style: solid; 
     border-radius: 1rem;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%; 
 }
 
 .manual-link:hover {
