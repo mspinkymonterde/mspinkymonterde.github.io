@@ -276,8 +276,12 @@ header {
     padding-left: 32px;
     padding-right: 32px;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
 }
+
 @media (min-width: 1700px) {
     .container,.container-ns,.container-lg,.container-lg-ns {
         max-width:1240px
