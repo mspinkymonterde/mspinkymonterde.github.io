@@ -678,6 +678,9 @@ header {
     flex-shrink: 1;
     padding: 1rem;
     padding-left: 2rem;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
 }
 
 .snippet {
