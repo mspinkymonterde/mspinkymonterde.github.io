@@ -1,6 +1,5 @@
 .r-cont {
     margin-bottom: 4rem;
-    margin-top: 6rem;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -100,11 +99,6 @@
     font-weight: 300;
 }
 
-.r-body .info {
-    text-transform: none;
-    margin: 20px 0;
-    font-weight: 400;
-}
 
 .r-h1 {
     line-height: 1.2;

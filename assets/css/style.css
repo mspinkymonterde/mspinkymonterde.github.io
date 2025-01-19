@@ -219,23 +219,22 @@ header {
 
 /* -----MORE MENUS styles ---------*/
 .open-menu {
-
-        visibility: hidden;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: all 0.2s ease-in-out;
-        position: fixed;
-        top: 4.5rem; 
-        right: 1rem; 
-        z-index: 998;
-        width: 15%;
-    
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    top: 4.5rem; 
+    right: 18.6rem; /* adjust this rem - still not responding  */
+    z-index: 998;
+    width: 15%;
+    padding: 0.5rem;
 }
 
 #open-menu.open {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0);
+visibility: visible;
+opacity: 1;
+transform: translateY(0);
 }
 
 .new-nav-container {
