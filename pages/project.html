@@ -5,18 +5,19 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Pinky Monterde | Software Developer</title>
-        
 
         <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
         <link href="../assets/css/style.css" rel="stylesheet">
         <link href="../assets/css/palette.css" rel="stylesheet">
-        <link href="../assets/css/about.css" rel="stylesheet">
+        <link href="../assets/css/proj.css" rel="stylesheet">
     </head>
 
     <body>
+
         <div class="loader" style="width: 0%;"></div>
         <div class="progress" style="width: 0%;"></div>
 
+        <!-- NAVBAR -->
         <header>
             <div class="header-container">
                 <a class="homepage-link" href="/" title="Homepage">
@@ -24,12 +25,10 @@
                 </a>
                 
                 <div class="divider"></div>
-        
+                
                 <nav class="navbar-container">
                     <div class="navbar-links-container">
-                        <a href="/" class="navbar-link">
-                            Work&nbsp;<span class="navbar-separator">/</span>
-                        </a>
+                        <a href="/" class="navbar-link">Project</a>
                         <a href="/pages/about" class="navbar-link">About</a>
                         <a href="/pages/contact" class="navbar-link">Contact</a>
                         <a id="more-button" href="#" class="navbar-more">•••</a>
@@ -37,35 +36,117 @@
                 </nav>  
             </div>
         </header>
-
-        <!-- More Menu Button -->
+        
+        <!-- MORE NAVBAR -->
         <div class="container">
-            <div id="open-menu" class="open-menu" aria-hidden="true">
-                <div class="new-nav-container">
-                    <nav class="navigation">
-                        <div class="navigation-links">
-                            <a href="/pages/achievements">Certification</a>
-                            <a href="/pages/reading">Reading</a>
-                            <a href="/pages/notes">Notes</a>
-                            <a href="/pages/now">Now</a>
-                        </div>
-                    </nav>
-                </div>
+        <div id="open-menu" class="open-menu" aria-hidden="true">
+            <div class="new-nav-container">
+                <nav class="navigation">
+                    <div class="navigation-links">
+                        <a href="/pages/achievements">Achievements</a>
+                        <a href="/pages/reading">Reading</a>
+                        <a href="/pages/notes">Notes</a>
+                        <a href="/pages/now">Now</a>
+                    </div>
+                </nav>
             </div>
         </div>
+        </div>
 
+        <!-- PROJECTS -->
         <main id="project">
+            <div class="proj-cont">
+                <h1>Project Snippets</h2> 
+            </div>
 
+            <section class="proj-grid">
+                <a class="proj-card"> 
+                    <div class="proj-card-content">
+                        <h3>Kopilism Hub</h3>
+                        <p>Designed an employee-side café management system to streamline operations.</p>
+                    </div>
+
+                    <div class="proj-card-img">
+                        <img src="../assets/Images/proj/dba3.png">
+                    </div>
+                    
+                    <div class="tags-cont">
+                        <div class="proj-tags">
+                            <span class="tag-yellow">Course</span>
+                            <span class="tag-purple">Dev</span>
+                        </div>
+                        <div class="proj-year">2025</div>
+                    </div>
+                </a>
+
+                <a class="proj-card">
+                    <div class="proj-card-content">
+                        <h3>Sparky Portfolio</h3>
+                        <p>A fully responsive design website.</p>
+                    </div>
+
+                    <div class="proj-card-img">
+                        <img src="../assets/Images/proj/sparkyportfolio.png">
+                    </div>
+                    
+                    <div class="tags-cont">
+                        <div class="proj-tags">
+                            <span class="tag-green">GDG</span>
+                            <span class="tag-pink">Just for fun</span>
+                        </div>
+                        <div class="proj-year">2025</div>
+                    </div>
+                </a>
+
+                <a href="https://www.figma.com/design/qnV6MfUlyjEt5RqK2F90jB/NEXUS-REMOTE-CONTROL?node-id=25-74&p=f&t=KlCizn9FIBpbMUBD-0" class="proj-card">
+                    <div class="proj-card-content">
+                        <h3>Nexus Universal Remote</h3>
+                        <p>A simple concept design for managing all your smart devices in one place, making control easier and more convenient.</p>
+                    </div>
+
+                    <div class="proj-card-img">
+                        <img src="../assets/Images/proj/remote1copy.png">
+                    </div>
+                    
+                    <div class="tags-cont">
+                        <div class="proj-tags">
+                            <span class="tag-yellow">Course</span>
+                            <span class="tag-blue">UI design</span>
+                        </div>
+                        <div class="proj-year">2023</div>
+                    </div>
+                </a>
+
+                <a href="https://www.figma.com/design/SrHq8R4CrcTbCfWbH5y7vK/NEXUS-CLOCK?" class="proj-card">
+                    <div class="proj-card-content">
+                        <h3>Nexus Advanced Chronometer</h3>
+                        <p>A sleek concept for a modern timekeeping tool, combining style and precision in one design.</p>
+                    </div>
+
+                    <div class="proj-card-img">
+                        <img src="../assets/Images/proj/timepiece2.png">
+                    </div>
+                    
+                    <div class="tags-cont">
+                        <div class="proj-tags">
+                            <span class="tag-yellow">Course</span>
+                            <span class="tag-blue">UI design</span>
+                        </div>
+                        <div class="proj-year">2023</div>
+                    </div>
+                </a>
+            </section>
         </main>
 
+        <!-- FOOTER -->
         <footer>
+            <!-- SHORTCUT NAV -->
             <div class="footer-container">
                 <div class="footer-card">
                     <a class="link-dif" href="/">Work&nbsp;<span>/</span></a>
                     <a href="/pages/about">About</a>
                     <a href="/pages/contact">Contact</a>
                 </div>
-
                 <div class="footer-container2">
                     <a  href="/pages/achievements">Certification</a>
                     <a  href="/pages/notes">Notes</a>
@@ -75,6 +156,7 @@
             </div>
 
             <div class="footer-container3">
+                    <!-- CUTIE CATS-->
                     <div class="where-card">
                         <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHRjbmR5cjJ3Y25jbGplZ2x0c3I4cmcwamZyMjY0YTZsMzRiNmlvdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/juSCTzqDAV1Xq/giphy.gif" 
                         class="where-photo1" alt="">
@@ -90,6 +172,7 @@
                 <div class="copyright">© 2024 | Pinky Monterde</div>
                 <div class="divider"></div>
 
+                <!-- SOCIALS -->
                 <div class="social-container">
                     <a href="https://read.cv/mspinkymonterde"
                         title="Read CV" target="_blank">
@@ -123,7 +206,7 @@
             </div>
         </footer>
 
-        <script src="../assets/js/progress.js"></script>
-        <script src="../assets/js/main.js"></script>
+        <script src="assets/js/progress.js"></script>
+        <script src="assets/js/main.js"></script>
     </body>
 </html>

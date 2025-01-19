@@ -86,7 +86,7 @@ body, .main, footer, a, h1, h2, h3, h4, h5, h6 {
 .progress { 
     position: fixed; 
     top: 0;
-    z-index: 9999;
+    z-index: 1000;
     left: 0;
     height: 4px;
     background-color: #6a0dad; 
@@ -111,7 +111,6 @@ header {
     z-index: 999; 
     padding: 0.5rem; 
     font-size: 1.25rem; 
-    position: fixed;
 }
 
 
@@ -165,15 +164,14 @@ header {
     }
 }
 
-
 /* -----NAVBAR styles ---------*/
 .navbar-container {
     display: flex; 
     align-items: center; 
     padding: 0.5rem; 
-    border-radius: .75rem;
+    border-radius: 1rem;
     background-color: var(--nav-bg); 
-    right: 2rem
+    font-size: 1rem;
 }
 
 @media screen and (min-width: 30em) {
@@ -194,11 +192,12 @@ header {
 
 .navbar-links-container a {
     text-decoration: none; 
-    padding: 0.75rem 1em; 
-    border-radius: .75rem; 
+    padding: 0.75rem 0.75rem; 
+    border-radius: 1rem; 
     white-space: nowrap; 
     transition: background-color 0.3s ease;
-    font-size: 18px;
+    font-size: 1rem;
+    align-items: center;
 }
 
 .navbar-link.active {
@@ -208,34 +207,35 @@ header {
 
 .navbar-separator {
     display: inline-block;
-    margin-left: 0.25rem;
+    margin-left: auto;
     opacity: 0.6; 
 }
 
 .navbar-more {
-    width: 3rem; 
+    width: 4rem; 
     text-align: center; 
     cursor: pointer;
 }
 
 /* -----MORE MENUS styles ---------*/
 .open-menu {
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.2s ease-in-out;
-    bottom: 60px;
-    position: fixed;
-    z-index: 9999; 
-    right: 0; 
-    top: 4.5rem;
-    width: 15%;
+
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.2s ease-in-out;
+        position: fixed;
+        top: 4.5rem; 
+        right: 1rem; 
+        z-index: 998;
+        width: 15%;
+    
 }
 
 #open-menu.open {
     visibility: visible;
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
 }
 
 .new-nav-container {
@@ -275,7 +275,7 @@ header {
     align-items: center; 
     background-color: var(--faint-bg); 
     border-radius: 0.75rem; 
-    font-size: 18px;
+    font-size:1rem;
 }
 
 .navigation-links a:hover {
@@ -297,7 +297,6 @@ header {
     text-transform: uppercase;
     color: var(--tertiary-color); 
     letter-spacing: 0.1em; 
-    margin-top: 5rem;
 }
 
 .intro-h1 {
@@ -346,10 +345,10 @@ header {
 }
 
 .profile-link img {
-    border-radius: 100%;
-    margin-top: 1rem; 
+    border-radius: 100%; 
     transform: scale(1.1);
-    width: 80px;
+    height: 50px;
+    width: 50px;
     background-color: var(--secondary-color);
 }
 
@@ -402,20 +401,25 @@ header {
 }
 
 .grid-box-frame {
-    width: 100%; 
+    display: flex;
+    align-items: end;
+    overflow: hidden
 }
 
 .grid-photo {
     display: flex; 
     flex-wrap: nowrap; 
     width: 100%;
+    gap: 1rem;
+    
 }
 
 .grid-photo > .photo {
     flex: 0 0 25%; 
-    height: 200px; 
+    height: 180px; 
     background-position: center;
     background-size: cover; 
+    border-radius: 0.8rem;
 }
 
 .grid-photo img {
@@ -585,27 +589,34 @@ header {
     animation: appear linear;
     animation-timeline: view();
     animation-range: entry 0 cover 40%;
-}
-
-.project-image {
-    border-style: none;
-    max-width: 100%;
-    max-height: 100%;
+    height: 500px; /* Ensures all cards have a fixed height */
+    display: flex;
+    flex-direction: column; 
 }
 
 .project-image-container {
-    display: flex; 
-
-    border-bottom-style:solid;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 60%; 
+    border-bottom-style: solid;
     border-width: 0.125rem;
-    background-color: rgba(147, 156, 220, 0.5);
+    background-color: rgba(147, 156, 220, 0.5); 
     border-color: var(--faint-border-color); 
-    padding: 1rem; 
+    padding: 1rem;
+    overflow: hidden; 
+}
+
+.project-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; 
 }
 
 .caption-card {
     padding: 1.5rem;
 }
+
 
 .card-h3 {
     display: flex;
@@ -619,7 +630,7 @@ header {
     color: var(--text-color);
     margin-bottom: 0.5rem;
     margin-top: 0;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
 .card-h3 div {
@@ -635,10 +646,10 @@ header {
 }
 
 .card-p div {
-    margin-right: 0.5rem;
-    font-weight: 600;
-    display: inline-block;
+    font-weight: 400;
+    display: block;
     color: var(--secondary-color);
+    font-stretch: normal;
 }
 
 .card-p a {
@@ -647,6 +658,7 @@ header {
     text-decoration: underline;
     text-decoration-thickness: 2px;
     color: var(--link-color);
+    margin-top: 0.5rem; 
 }
 
 
@@ -679,6 +691,7 @@ header {
 
 .work-card {
     display: flex;
+    margin-bottom: .5rem;
 }
 
 
@@ -699,17 +712,12 @@ header {
 
 .img-card2 span {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     z-index: 100;
     background-size: cover !important;
-    background-repeat: no-repeat;
-    background-position: center center;
-    border-radius: .25rem;
+    background-position: center;
+    border-radius: .75rem;
 }
 
 
