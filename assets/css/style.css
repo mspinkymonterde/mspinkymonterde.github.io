@@ -824,18 +824,13 @@ footer a:hover{
     transition: color .15s ease-in;
 }
 
-.footer-card span{
-    display: inline-block;
-    opacity: .6;
-    margin-left: .25rem;
-}
+
 
 .footer-card a {
-    color: var(--secondary-color);
-    display: inline-block;
+    font-weight: 400;
     text-decoration: none;
+    color: var(--secondary-color);
     transition: color .15s ease-in;
-    
 }
 
 .footer-container2 {
