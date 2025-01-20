@@ -1,0 +1,106 @@
+.proj-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 1240px;
+    padding-left: 32px;
+    padding-right: 32px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.proj-cont h1 {
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 0.5rem 0;
+    text-transform: uppercase;;
+    font-size: 3rem;
+}
+
+.proj-cont p {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.post-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1240px;
+    padding-left: 32px;
+    padding-right: 32px;
+    margin: 0 auto; 
+    margin-top: 2rem;
+}
+
+.card-link {
+    border-radius: .5rem;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-decoration: none;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    cursor: pointer;
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    color: #e3e0ff;
+    background-color: rgba(186,179,255,0.102);
+}
+
+.card-link:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.card-title {
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 2em 0 0.8em 0;
+    color: #f6f5ff;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    text-transform: none;
+    font-size: 1.5rem;
+}
+
+.card-meta {
+    justify-content: space-between;
+    letter-spacing: .1em;
+    opacity: .8;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: .75rem;
+}
+
+.read-time {
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: .1em;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: .75rem;
+    margin-bottom: .25rem;
+    color: #96a8df;
+}
+
+.meta-highlight {
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: .75rem;
+    color: #96a8df;
+}
