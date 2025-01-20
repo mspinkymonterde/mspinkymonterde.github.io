@@ -70,22 +70,56 @@
                         <div class="divider"></div>
                     </div>  
                     
-                    <div class="contact-container">
-                        <div class="contact-content">
-                            <h2>Get in Touch</h2>
-                            <p>
-                                I’m very approachable and would love to speak to you. Feel free to send me an email, follow me on social media, or simply complete the enquiry form.
-                            </p>
-                        </div>
+                    <div class="contact">
+                        <div class="contact-cont">
+                            <div class="left">
+                                <div class="form-wrapper">
+                                    <div class="contact-heading">
+                                        <h1> Let's work together!</h1>
+                                        <p class="text">
+                                            I'm always open to new projects and opportunities. 
+                                            If you have a project in mind, or just want to say hi, 
+                                            feel free to send me a message using the form below.
+                                        </p>
 
-                        <div class="contact-form">
-                            <form action="contact.php" method="POST">
-                                <input type="text" name="name" placeholder="Name" required>
-                                <input type="email" name="email" placeholder="Email Address" required>
-                                <input type="text" name="subject" placeholder="Subject" required>
-                                <textarea name="message" placeholder="Your message" required></textarea>
-                                <button type="submit">Send Message</button>
-                            </form>
+                                    </div>
+                                    <form class="contact-form" action="contact.php" method="POST">
+                                        <div class="input-wrap">
+                                            <input class= "contact-input" type="text" name="First Name" required>
+                                            <label>First Name</label>
+                                            <i class="ri-id-card-fill"></i>
+                                        </div>
+                                        
+                                        <div class="input-wrap">
+                                            <input class= "contact-input" type="text" name="Last Name" required>
+                                            <label>Last Name</label>
+                                            <i class="ri-id-card-fill"></i>
+                                        </div>
+                                        
+                                        <div class="input-wrap-email">
+                                            <input class= "contact-input" type="email" name="Email" required>
+                                            <label>Email</label>
+                                            <i class="ri-mail-fill"></i>
+                                        </div>
+
+                                        <div class="input-wrap-textarea">
+                                            <textarea name="Message" class="contact-input"></textarea>
+                                            <label>Message</label>
+                                            <i class="ri-inbox-fill"></i>
+                                        </div>
+
+                                        <div class="contact-buttons">
+                                            <button class="btn-upload">
+                                                <span>
+                                                    <i class="ri-attachment-2"></i> Add Attachment
+                                                </span>
+                                                <input type="file" name="Attachment">
+                                            </button>
+                                            <input type="submit" value="Send Message" class="btn">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -161,6 +195,7 @@
             </div>
         </footer>
 
+        <script src="../assets/js/contact.js"></script>
         <script src="../assets/js/progress.js"></script>
         <script src="../assets/js/main.js"></script>
     </body>
