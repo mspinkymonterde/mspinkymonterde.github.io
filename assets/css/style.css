@@ -219,6 +219,7 @@ header {
     bottom: -6px;
     width: 0;
     height: 2px;
+    background-color: var(--tertiary-color);
     transition: width .4s ease-out;
   }
 
@@ -236,6 +237,11 @@ header {
     width: 100%;
   }
   
+  .nav__link.active span::after, 
+.nav__link[data-active="true"] span::after {
+    width: 100%;
+}
+
   /* Sibling fade animation */
   .nav__list:has(.nav__link:hover) .nav__link:not(:hover) {
     opacity: .4;

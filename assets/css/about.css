@@ -37,7 +37,6 @@ h3, h4, h5, h6 {
 }
 @media (min-width: 30em) {
     .about-container {
-        margin-top: 4rem;
         flex-direction: row-reverse;
     }
 }

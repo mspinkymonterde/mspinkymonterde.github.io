@@ -29,30 +29,32 @@
                 
                 <nav class="navbar-container">
                     <div class="navbar-links-container">
-                        <a href="/" class="navbar-link">Project</a>
-                        <a href="/pages/about" class="navbar-link">About</a>
-                        <a href="/pages/contact" class="navbar-link">Contact</a>
-                        <a id="more-button" href="#" class="navbar-more">•••</a>
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                               <a href="/" class="nav__link">
+                                  <i class="ri-arrow-right-up-line"></i>
+                                  <span>Projects</span>
+                               </a>
+                            </li>
+          
+                            <li class="nav__item">
+                               <a href="/pages/about" class="nav__link">
+                                  <i class="ri-arrow-right-up-line"></i>
+                                  <span>About</span>
+                               </a>
+                            </li>
+          
+                            <li class="nav__item">
+                               <a href="/pages/contact" class="nav__link">
+                                  <i class="ri-arrow-right-up-line"></i>
+                                  <span>Contact</span>
+                               </a>
+                            </li>
+                        </ul>
                     </div>
                 </nav>  
             </div>
         </header>
-        
-        <!-- MORE NAVBAR -->
-        <div class="container">
-        <div id="open-menu" class="open-menu" aria-hidden="true">
-            <div class="new-nav-container">
-                <nav class="navigation">
-                    <div class="navigation-links">
-                        <a href="/pages/achievements">Achievements</a>
-                        <a href="/pages/reading">Reading</a>
-                        <a href="/pages/notes">Notes</a>
-                        <a href="/pages/now">Now</a>
-                    </div>
-                </nav>
-            </div>
-        </div>
-        </div>
 
         <main id="reading">
             <div class="r-cont">
@@ -304,12 +306,12 @@
             <!-- SHORTCUT NAV -->
             <div class="footer-container">
                 <div class="footer-card">
-                    <a class="link-dif" href="/">Work&nbsp;<span>/</span></a>
-                    <a href="/pages/about">About</a>
-                    <a href="/pages/contact">Contact</a>
+                    <a class="nav__link active" href="/">Projects</a>
+                    <a class="nav__link" href="/pages/about">About</a>
+                    <a class="nav__link" href="/pages/contact">Contact</a>
                 </div>
                 <div class="footer-container2">
-                    <a  href="/pages/achievements">Certification</a>
+                    <a  href="/pages/achievements">Credential</a>
                     <a  href="/pages/notes">Notes</a>
                     <a  href="/pages/reading">Reading</a>
                     <a  href="/pages/now">Now</a>
