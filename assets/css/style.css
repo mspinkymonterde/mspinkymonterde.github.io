@@ -762,7 +762,7 @@ header {
 
 .grid-container img {
     border-style: none;
-    max-width: 100%;
+    max-width: 150%;
     backface-visibility: hidden;
     transform: translateZ(0);
     transition: transform .10s ease-out;
