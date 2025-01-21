@@ -1,3 +1,78 @@
+<?php
+// Data config
+include('conn.php');
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+// Include PHPMailer files
+require '../PHPMailer-master/src/PHPMailer.php';
+require '../PHPMailer-master/src/Exception.php';
+require '../PHPMailer-master/src/SMTP.php';
+
+// Check if the form was submitted
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Sanitize input data
+    $firstname = htmlspecialchars(trim($_POST['firstname']));
+    $lastname = htmlspecialchars(trim($_POST['lastname']));
+    $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
+    $message = htmlspecialchars(trim($_POST['message']));
+
+    // Validate required fields
+    if (!empty($firstname) && !empty($lastname) && !empty($email) && !empty($message)) {
+        // Validate email
+        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            
+            // Check the table name and insert data into the database
+            $sql = "INSERT INTO emails (firstname, lastname, email, message) 
+                    VALUES ('$firstname', '$lastname', '$email', '$message')";
+            
+            if ($conn->query($sql) === TRUE) {
+                // Configure PHPMailer
+                $mail = new PHPMailer(true);
+
+                try {
+                    // SMTP settings
+                    $mail->isSMTP();
+                    $mail->Host = 'smtp.gmail.com'; // Gmail SMTP server
+                    $mail->SMTPAuth = true;
+                    $mail->Username = 'ssuummeerr4321@gmail.com'; // Your Gmail address
+                    $mail->Password = 'Pinky21345'; // Your Gmail app password
+                    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+                    $mail->Port = 587;
+
+                    // Email settings
+                    $mail->setFrom($email, "$firstname $lastname"); // From email and name
+                    $mail->addAddress('pinkymonterde.ofc@gmail.com'); // Your recipient email
+                    $mail->Subject = "New Contact Form Submission";
+                    $mail->Body = "You have received a new message from your website contact form.\n\n"
+                                . "First Name: $firstname\n"
+                                . "Last Name: $lastname\n"
+                                . "Email: $email\n\n"
+                                . "Message:\n$message\n";
+
+                    // Send email
+                    $mail->send();
+                    $successMessage = "Thank you for reaching out! Your message has been sent successfully.";
+                } catch (Exception $e) {
+                    $errorMessage = "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+                }
+            } else {
+                $errorMessage = "Error saving the message to the database.";
+            }
+        } else {
+            $errorMessage = "Please provide a valid email address.";
+        }
+    } else {
+        $errorMessage = "All fields are required. Please complete the form.";
+    }
+}
+
+// Close the database connection
+$conn->close();
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -83,46 +158,41 @@
                                         </p>
 
                                     </div>
-                                    <form class="contact-form" action="contact.php" method="POST">
+
+                                    <!-- CONTACT FORM -->
+                                    <form class="contact-form" action="contact.php" method="POST" enctype="multipart/form-data">
                                         <div class="input-wrap">
-                                            <input class= "contact-input" type="text" name="First Name" required>
+                                            <input class="contact-input" type="text" name="firstname" required>
                                             <label>First Name</label>
                                             <i class="ri-id-card-fill"></i>
                                         </div>
-                                        
+                                    
                                         <div class="input-wrap">
-                                            <input class= "contact-input" type="text" name="Last Name" required>
+                                            <input class="contact-input" type="text" name="lastname" required>
                                             <label>Last Name</label>
                                             <i class="ri-id-card-fill"></i>
                                         </div>
-                                        
+                                    
                                         <div class="input-wrap-email">
-                                            <input class= "contact-input" type="email" name="Email" required>
+                                            <input class="contact-input" type="email" name="email" required>
                                             <label>Email</label>
                                             <i class="ri-mail-fill"></i>
                                         </div>
-
+                                    
                                         <div class="input-wrap-textarea">
-                                            <textarea name="Message" class="contact-input"></textarea>
+                                            <textarea name="message" class="contact-input"></textarea>
                                             <label>Message</label>
                                             <i class="ri-inbox-fill"></i>
                                         </div>
-
+                                    
                                         <div class="contact-buttons">
-                                            <button class="btn-upload">
-                                                <span>
-                                                    <i class="ri-attachment-2"></i> Add Attachment
-                                                </span>
-                                                <input type="file" name="Attachment">
-                                            </button>
                                             <input type="submit" value="Send Message" class="btn">
                                         </div>
-                                    </form>
-                                </div>
+                                    </form>                                   
+                                </div>       
                             </div>
                         </div>
                     </div>
-
                 </section>
             </div>
         </main>

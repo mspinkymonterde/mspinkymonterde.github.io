@@ -16,3 +16,14 @@ inputs.forEach(input => {
         }
     });
 });
+
+
+
+// Select the button and file input
+const btnUpload = document.querySelector('.btn-upload');
+const fileInput = document.querySelector('.file-upload');
+
+// Trigger the file input when the button is clicked
+document.getElementById('uploadTrigger').addEventListener('click', function () {
+    document.getElementById('fileInput').click();
+});
